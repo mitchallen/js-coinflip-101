@@ -1,3 +1,6 @@
+// Author: Mitch Allen
+// File: app.js
+
 import { coinFlip } from './coinflip.js';
 
 let canvas = document.getElementById("canvas");

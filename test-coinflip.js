@@ -1,3 +1,6 @@
+// Author: Mitch Allen
+// File: test-coinflip.js
+
 import {coinFlip} from './coinflip.js';
 
 // define test function for coinFlip()
