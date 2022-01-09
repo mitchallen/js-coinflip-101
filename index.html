@@ -7,40 +7,7 @@
 
 <body>
   <canvas id="canvas" width="300" height="300" />
-  <script type="module">
-    let canvas = document.getElementById("canvas");
-    // coinflip
-    let coinFlip = () => Math.round(Math.random());
-    const LIMIT = 100;
-    // create an array filled with coin flip results
-    let arr = Array.from({ length: LIMIT }, () => coinFlip());
-    console.log(arr);
-    let width = 300;
-    let height = 300;
-    let x = 10;
-    let y = 10;
-    let cellSize = width / x;
-    let padding = 1;
-    let NEON_GREEN = "#39FF14";
-    let ctx = canvas.getContext('2d');
-    if (ctx) {
-      // draw background
-      ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = "black";
-      ctx.fillRect(0, 0, width, height);
-      let cursor = 0;
-      for (let i = 0; i < x; i++) {
-        for (let j = 0; j < y; j++) {
-          ctx.fillStyle = arr[cursor++] ? NEON_GREEN : "black";
-          ctx.fillRect(
-            i * cellSize + padding,
-            j * cellSize + padding,
-            cellSize - padding * 2,
-            cellSize - padding * 2
-          );
-        }
-      }
-    }
+  <script type="module" src="./app.js">
   </script>
 </body>
 
